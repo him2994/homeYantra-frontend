@@ -1,0 +1,103 @@
+ <!-- <ul class="menu"> -->
+    <!-- <li><a href="#!/products">Home</a></li> -->
+    <!-- <li><a href="#!/products">Back</a></li>
+  </ul> -->
+<!-- <p>This is the partial for view 2.</p> -->
+<!-- <p>
+  Showing of 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+</p> -->
+<!-- &nbsp
+<div class="ui container segment">
+	<div class="ui center aligned grid">
+		&nbsp
+		<div class="row menu">
+			<div class="eight wide column">
+				<button class="ui labeled icon button float-left history" ng-click="home()">
+				  <i class="home icon"></i>
+				  	Home	
+				</button>	
+			</div>
+			<div class="eight wide column" >
+				<button class="ui labeled icon button float-right history" ng-click="home()">
+				  <i class="reply icon"></i>
+				  	Back
+				</button>
+			</div>
+
+			<div class="row">
+				<img src="https://static.homeyantra.com/images/products/{{product.img_hash}}" class="ui medium image">
+
+				<div class=""></div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div class="ui fluid container details-page">
+	<div class="banner-image">
+		<img src="https://static.homeyantra.com/images/banners/909469ab9e7cc9e6fbedf82d1ca54cc0672d88d9c076e475cb3def663c79.jpeg">
+		<div class="banner-content">
+			<h4 class="ui header">{{product.title}}</h4>
+			<h6 class="ui header">{{product.model_name}}</h6>
+
+			<h3 class="ui header space-above">
+				Rs. {{product.price}}
+				<span class="dashed">{{product.mrp}}</span>
+			</h3>
+
+			<h6 class="ui header space-above">Free 1 Day Delivery</h6>
+			<h6 class="ui header">Hassle Free Installation</h6>
+
+			<div class="row space-above">
+				<button class="ui blue button">QUICK BUY</button>
+				<button class="ui button">Add To Cart &nbsp;<i class="add to cart icon"></i></button>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui segment">
+		<div class="ui grid">
+			<div class="three wide column">
+				<div class="image-container">
+					<div class="box">
+						<img src="https://static.homeyantra.com/images/products/{{url}}_00.jpg">
+					</div>
+
+					<div class="box">
+						<img src="https://static.homeyantra.com/images/products/{{url}}_01.jpg">
+					</div>
+
+					<div class="box">
+						<img src="https://static.homeyantra.com/images/products/{{url}}_02.jpg">
+					</div>
+
+					<div class="box">
+						<img src="https://static.homeyantra.com/images/products/{{url}}_03.jpg">
+					</div>
+
+					<div class="box">
+						<img src="https://static.homeyantra.com/images/products/{{url}}_04.jpg">
+					</div>
+				</div>
+			</div>
+
+			<div class="seven wide column main-image">
+				<img class="ui medium image" src="https://static.homeyantra.com/images/products/{{product.img_hash}}">
+			</div>
+			<div class="six wide column features">
+				<div class="feature-container">
+					<button class="ui labeled icon button float-right" ng-click="home()">
+				  		<i class="reply icon"></i>
+					  	Back
+					</button>
+					<h4 class="ui header">Key Features</h4>
+					<h6 class="ui header"> <i class="point"></i>Some Point</h6>
+					<h6 class="ui header"><i class="point"></i>Some Point</h6>
+					<h6 class="ui header"><i class="point"></i>Some Point</h6>
+					<h6 class="ui header"><i class="point"></i>Some Point</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

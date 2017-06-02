@@ -1,0 +1,98 @@
+<!-- <div id="filters">
+	<select multiple ng-model="pcategory">
+	  <option value="AC">Air Conditioner</option>
+	  <option value="Microwave">Microwave</option>
+	  <option value="tv">Television</option>
+	  <option value="Washing Machine">Washing Machine</option>
+	  <option value="Refrigerator">Refrigerator</option>
+	</select>
+	<select multiple ng-model="brand">
+		<option ng-repeat="x in brands" value="{{x}}">{{x}}</option>
+	</select>
+	<input type="text" ng-model="min_price" placeholder="min_price">
+	<input type="text" ng-model="max_price" placeholder="max_price">
+	<button ng-click="submit(brand, pcategory, min_price, max_price)">Apply Filter</button>
+</div>
+ -->
+ &nbsp
+<div class="ui container segment">
+	<div class="ui center aligned grid">
+		&nbsp
+		<div class="row menu">
+			<div class="eight wide column">
+				<button class="ui labeled icon button float-left history" ng-click="home()">
+				  <i class="home icon"></i>
+				  	Home
+				</button>	
+			</div>
+			<div class="eight wide column" >
+				<button class="ui labeled icon button float-right history" ng-click="toggleFilters()">
+				  <i class="filter icon"></i>
+				  	<span ng-if="showFilters">Hide</span>
+				  	<span ng-if="!showFilters">Show</span>
+				  	Filter
+				</button>
+			</div>
+		</div>
+		<div class="row" ng-if="showFilters">
+			<div class="ui form">
+				<div class="ui three column grid">
+					<div class="column">
+						<div class="field">
+							<label>Category</label>
+								<select multiple="" ng-model="pcategory" class="ui search dropdown">
+								  <option value="">Select Category</option>
+								  <option value="AC">Air Conditioner</option>
+								  <option value="Microwave">Microwave</option>
+								  <option value="tv">Television</option>
+								  <option value="Washing Machine">Washing Machine</option>
+								  <option value="Refrigerator">Refrigerator</option>
+								</select>
+						</div>
+					</div>
+					<div class="column">
+						<div class="field">
+							<label>Brand</label>
+							<select multiple="" ng-model="brand" class="ui dropdown">
+							  <option value="">Select Brand</option>
+							  <option ng-repeat="x in brands" value="{{x}}">{{x}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="column">
+						<div class="two fields">
+							<div class="field">
+							  <label>Min Price</label>
+							  <input type="text" placeholder="Min Price" ng-model="min_price">
+							</div>
+							<div class="field">
+							  <label>Max Price</label>
+							  <input type="text" placeholder="Max Price" ng-model="max_price">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui sixteen wide column center aligned grid">
+					<h6 class="ui disabled header">Please select multiple while pressing 'ctrl'.</h6>
+					<button class="ui blue button" ng-click="submit(brand, pcategory, min_price, max_price)">Apply Filter</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="four wide column cell" ng-repeat="x in products">
+				<a href="#!/products/{{x.model_name}}">
+				<div class="ui small image img_holder">
+					<img src="https://static.homeyantra.com/images/products/{{x.img_hash}}" class="product-image">
+				</div>
+				<div>
+					<h5 class="ui header">{{x.title}}</h5>
+					<h4 class="ui header bold">{{x.price}}</h4>
+					<h6 class="ui header red"><span class="dashed">{{x.mrp}}</span> 
+						<i class="ui header green">{{100 - ((x.price/x.mrp)*100) | number:0}}% off</i>
+					</h6>
+				</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
